@@ -1,0 +1,23 @@
+apply plugin: 'java'
+
+jar {
+	baseName = 'concert'
+    version =  '0.0.1-SNAPSHOT'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+}
+
+dependencies {
+    testCompile ("junit:junit:4.12")
+    testCompile("org.springframework:spring-test:${springVersion}")
+    
+    compile("org.springframework:spring-context:${springVersion}")
+    compile("org.springframework:beans:${springVersion}")
+    compile("org.aspectj:aspectjweaver:${aspectJVersion}")
+    
+    
+}
+

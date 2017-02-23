@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+repositories {
+	maven {
+		url  'http://maven.oschina.net/content/groups/public/'
+	}
+	jcenter()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+    
+    //spring
+    def springVersion =  "4.0.1.RELEASE"
+    def springDataJpaVersion = "1.5.1.RELEASE"
+    
+   	compile "org.springframework:spring-webmvc:$springVersion"
+   	compile "org.springframework:spring-context:$springVersion"
+   	compile "org.springframework:spring-jdbc:$springVersion"
+   	compile "org.springframework:spring-tx:$springVersion"
+   	compile "org.springframework:spring-orm:$springVersion"
+   	compile "org.springframework:spring-oxm:$springVersion"
+   	compile "org.springframework.data:spring-data-jpa:$springDataJpaVersion"
+   	
+   	
+    
+}
+
